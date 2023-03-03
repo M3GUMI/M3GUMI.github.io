@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>How to write a paper（MEGUMI版） - MEGUMI</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="MEGUMI&#039;S Blog"><meta name="msapplication-TileImage" content="/img/ICHIKA.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MEGUMI&#039;S Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="随着Submission deadline is now这几个字出现在USENIX Security 2023的投稿网站上，为期一周的论文自我review环节结束了。这一周内，我们以咬文嚼字的方式将论文修改了一遍又一遍，这不仅让论文经历了从破败不堪到还算不错的蜕变，而且极大地提升了我的写作能力（感觉有点像仙侠小说中的闭关修炼）。虽然连续七天每天得改十多小时的论文很辛苦，但是这个经历确实让我收获满满"><meta property="og:type" content="blog"><meta property="og:title" content="How to write a paper（MEGUMI版）"><meta property="og:url" content="http://example.com/2023/02/09/2023.2.9How%20to%20wirte%20a%20paper/"><meta property="og:site_name" content="MEGUMI"><meta property="og:description" content="随着Submission deadline is now这几个字出现在USENIX Security 2023的投稿网站上，为期一周的论文自我review环节结束了。这一周内，我们以咬文嚼字的方式将论文修改了一遍又一遍，这不仅让论文经历了从破败不堪到还算不错的蜕变，而且极大地提升了我的写作能力（感觉有点像仙侠小说中的闭关修炼）。虽然连续七天每天得改十多小时的论文很辛苦，但是这个经历确实让我收获满满"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:published_time" content="2023-02-09T12:33:17.018Z"><meta property="article:modified_time" content="2023-02-25T19:17:13.976Z"><meta property="article:author" content="MEGUMI"><meta property="article:tag" content="论文"><meta property="article:tag" content="表达能力"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/02/09/2023.2.9How%20to%20wirte%20a%20paper/"},"headline":"How to write a paper（MEGUMI版）","image":["http://example.com/img/og_image.png"],"datePublished":"2023-02-09T12:33:17.018Z","dateModified":"2023-02-25T19:17:13.976Z","author":{"@type":"Person","name":"MEGUMI"},"publisher":{"@type":"Organization","name":"MEGUMI","logo":{"@type":"ImageObject","url":{"text":"MEGUMI"}}},"description":"随着Submission deadline is now这几个字出现在USENIX Security 2023的投稿网站上，为期一周的论文自我review环节结束了。这一周内，我们以咬文嚼字的方式将论文修改了一遍又一遍，这不仅让论文经历了从破败不堪到还算不错的蜕变，而且极大地提升了我的写作能力（感觉有点像仙侠小说中的闭关修炼）。虽然连续七天每天得改十多小时的论文很辛苦，但是这个经历确实让我收获满满"}</script><link rel="canonical" href="http://example.com/2023/02/09/2023.2.9How%20to%20wirte%20a%20paper/"><link rel="icon" href="/img/ICHIKA.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">MEGUMI</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/M3GUMI"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-02-09T12:33:17.018Z" title="2023/2/9 20:33:17">2023-02-09</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-02-25T19:17:13.976Z" title="2023/2/26 03:17:13">2023-02-26</time></span><span class="level-item"> MEGUMI </span><span class="level-item"><a class="link-muted" href="/categories/%E7%A7%91%E7%A0%94/">科研</a></span><span class="level-item">17 minutes read (About 2619 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">How to write a paper（MEGUMI版）</h1><div class="content"><p>随着Submission deadline is now这几个字出现在USENIX Security 2023的投稿网站上，为期一周的论文自我review环节结束了。这一周内，我们以咬文嚼字的方式将论文修改了一遍又一遍，这不仅让论文经历了从破败不堪到还算不错的蜕变，而且极大地提升了我的写作能力（感觉有点像仙侠小说中的闭关修炼）。虽然连续七天每天得改十多小时的论文很辛苦，但是这个经历确实让我收获满满。在我那健忘的大脑还记得时，我想结合这七天改论文的经历以及感想，说一下我目前理解的论文写作方法。</p>
+<p>问我为什么8号截稿，但是2月末才发这篇博客？因为学校马原毛概期末考试太难顶了，嗯网络攻防更是个重量级，谁都想不到它会考snort😭。</p>
+<span id="more"></span>
+
+<p>我将从论文的前置准备、行文思路、结构中的每个章节来讲解如何行文。</p>
+<h2 id="论文的前置准备"><a href="#论文的前置准备" class="headerlink" title="论文的前置准备"></a>论文的前置准备</h2><h3 id="写作逻辑"><a href="#写作逻辑" class="headerlink" title="写作逻辑"></a>写作逻辑</h3><p>在写论文之前，你需要给你所作的工作定下文章要素，从而梳理写作逻辑，文章要素有如下几个：</p>
+<ul>
+<li>background：本工作研究领域的背景，有什么需求</li>
+<li>motivation：现有解决该需求的方案有什么缺陷</li>
+<li>method：你的方案是什么</li>
+<li>advantage：你提出的方案有什么好处（这里需要呼应motivation）</li>
+<li>challenge：为了达到这些好处遇到的难题，你是怎么解决的（和drawback的区别：drawback是现有方案的区别，challenge是你引用新技术解决drawback时会引入的<strong>新的问题</strong>）</li>
+<li>contribution：advantage和challenge</li>
+</ul>
+<p>把文章要素用一些过渡句串起来串起来形成写作逻辑：background的需求诞生了一些现有方案（background）。但是现有方案有些缺陷导致不能很好地满足需求，本文想要解决填补缺陷（motivation）。为了达到moticvation使用了什么技术，大致是怎么做的（method）。这个method有什么好处（advantage）。但是由于xxx会造成新的问题，我们是xx解决的（challenge）。我们的贡献如下：….（contribution）。</p>
+<h3 id="定义符号"><a href="#定义符号" class="headerlink" title="定义符号"></a>定义符号</h3><p>在写论文之前预先定义符号可以避免符号冲突，节省很多写作时间。定义符号具体工作分为如下两点：</p>
+<ul>
+<li>定义字体：哪些字体表示哪些类型，比如粗体 $\mathbf{a}$ 表示向量，等线 $\mathtt{A}(\cdot)$ 表示函数</li>
+<li>定义符号：哪些符号表示什么意思</li>
+</ul>
+<h2 id="行文思路"><a href="#行文思路" class="headerlink" title="行文思路"></a>行文思路</h2><p>论文本质上还是八股文，行文思路是比较固定的，按照结构往上面填空就行：</p>
+<p>一篇论文大致有如下结构：</p>
+<ul>
+<li>Abstract：用最简单的话总结论文，包括background，motivation，method，contribution</li>
+<li>Introduction：Abstract的细化</li>
+<li>Related Work：论文中使用的各项技术的现有工作</li>
+<li>Preliminary：在引入具体方案之前需要让读者知道的知识</li>
+<li>Definition：从背景到motivation再到method的转折段落，用于进一步解决读者的疑惑</li>
+<li>Proposed Scheme：论文中提出的具体方案</li>
+<li>Analysis：比如证明密码方案的安全性</li>
+<li>Experiment：做了什么实验，有哪些结果，对结果进行分析</li>
+</ul>
+<p>论文中最重要的是贡献，写作的的核心行文思路需要围绕贡献进行行文：摘要说明贡献，引言总结贡献，相关工作铺垫贡献，先验知识帮助读者理解方案进而理解贡献，问题定义让，具体方案表明贡献，实验和分析证实贡献，总结突出贡献。</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>摘要用于说明background，motivation，method，contribution等要素。首先一句话说明研究背景，然后一句话说明motivation（如果有多点motivation就用逗号隔开或者用and等来合并），接着是method，只需要说明用了什么技术（如果用了什么办法可以用很短的句子来概括那也可以加上）。最后是contribution，它的篇幅在abstract中占比最高。对于安全的论文，一般摘要的最后都会说类似的内容：安全分析说明了方案具有足够安全性，实验结果说明方案具有足够的效率，但是任何论文都可以这样说，并不具有论文本身的特色。我们可以将这句话中加上能让读者一下就get到的具有方案特色的关键词，来体现出论文本身的特色。</p>
+<p>摘要的篇幅通常在200个单词以内，在有限的篇幅里让读者get到论文大体的全貌是比较困难，很考察英文写作功底。解决这个问题有一套我总结的比较通用的办法，我们可以先通过要素列出一个较长的摘要然后剪枝，具体方法可以参照如下几点：</p>
+<ol>
+<li>background只留一句</li>
+<li>motivation不需要突出前因，着重突出后果（或者说是background的需求），后果尽量用名词性短语描述，然后利用连接词或者从句拼到同一个句子中</li>
+<li>如果篇幅依然较长，method只列出最主要的技术，并精简地说有什么advantage</li>
+<li>说明解决了什么challenge（这里也可以看情况删去）</li>
+<li>实验和安全证明的结果如何</li>
+</ol>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>引言简单来说就是摘要的进一步扩充，读者在读完摘要的时候对方案的background，motivation，method，contribution依然比较模糊，需要引言来详细说明。</p>
+<p>写引言坚持萌新友好，正篇文章中贯彻萌新友好（特别是交叉领域，比如AI和密码的交叉，AI的读者不知道密码学的概念，密码学的读者不知道AI的概念），写作的过程中，把自己当作小白，反复读引言，如果你觉得读不明白就需要换一种表达方式。这说着简单实现起来却非常难，首先，引言的目的是让读者进一步明白要素的内容和之间的联系，如果一板一眼地、一句接一句地进行推理可能会造成文章语言啰嗦；其次，引言中需要尽量避免使用过于专业的词汇，如果有就需要对专业词汇做出简单的解释。而在method和contribution中总会出现专业词汇的身影，如果不能正确处理专业词汇的表达就可能造成文章啰嗦逻辑混乱的问题。</p>
+<p>引言的行文：</p>
+<ol>
+<li>第一段介绍研究背景</li>
+<li>第二段介绍现有研究工作以及大致实现流程，</li>
+<li>第三段介绍method</li>
+<li>第四段分点总结contribution</li>
+</ol>
+<h3 id="第一段"><a href="#第一段" class="headerlink" title="第一段"></a>第一段</h3><p>介绍具体研究场景是什么，用于什么地方，目前有什么问题。</p>
+<p>第一段相对比较简单，需要注意的要点只有说服力。我从模型被窃取举例，说明增强说服力的几种方式：</p>
+<ol>
+<li>根据目前热点事件来说明：ChatGPT训练需要耗费xx算力和xx时间，如果被窃取是OPENAI的重大损失</li>
+<li>引用参考文献：模型被窃取将会是企业的重大损失\cite{xx}</li>
+<li>从理论上来论述：不太推荐这种方法，首先是说服力可能不足，其次是可能会导致第一段篇幅过长</li>
+</ol>
+<h3 id="第二段"><a href="#第二段" class="headerlink" title="第二段"></a>第二段</h3><p>介绍现在有什么方法尝试解决这些问题、他们有什么缺陷（你们的motivation），分为那几点</p>
+<p>注意：</p>
+<ol>
+<li><p>其他方案的方法的描述越简短越好，因为这是别人的工作，不是重点。</p>
+</li>
+<li><p>motivation的描述需要分点为子motivation1，motivation2。通过分点，读者可以通过Introduction很快get到你的motivation有几点，分别是什么。</p>
+<p>例子：motivation</p>
+<ol>
+<li>现有方案需要可信第三方</li>
+<li>现有方案不具有可证明安全性</li>
+<li>。。。。</li>
+</ol>
+</li>
+<li><p>深刻指具体说明motivation分点时，需要适当深入到具体会会造成什么问题。</p>
+<p>一个具体的行文例子：虽然目前已经提出了一些解决background的方案，但是现有方案需要可信第三方。本例子就犯了motivation不够深入的问题。</p>
+<p>在该例子中，读者（特别是零基础的或者交叉领域的读者）很容易出现一个疑问：为什么需要可信第三方是现有方案的drawback？</p>
+<p>修改一下上述例子：虽然目前已经提出了一些解决background的方案，但是可能遇到xx安全问题，现有方案需要使用可信第三方来避免该问题。在现实，过分的信任可能会导致隐私从第三方泄露。</p>
+<p>修改后的例子可以让读者很容易地get到为什么会出现这样的motivation。但是深刻阐述必然会带来篇幅过长，所以说明motivation时需要把握好度，并利用自己地语言功底来对句子进行压缩。</p>
+</li>
+</ol>
+<h3 id="第三段"><a href="#第三段" class="headerlink" title="第三段"></a>第三段</h3><p>第三段首先要介绍实现了一个怎样的东西，然后和上一段提出的motivation相呼应，来简单阐述论文解决了现有工作的缺陷。</p>
+<h3 id="引言的要求"><a href="#引言的要求" class="headerlink" title="引言的要求"></a>引言的要求</h3><p>对我来说，一个较好的引言有几个要求：说服力，萌新友好，要点鲜明，前后呼应，突出贡献</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E8%AE%BA%E6%96%87/">论文</a><a class="link-muted mr-2" rel="tag" href="/tags/%E8%A1%A8%E8%BE%BE%E8%83%BD%E5%8A%9B/">表达能力</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/03/03/2023.3.3Gensyn/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Gensyn-超大规模分布式深度学习的高效计算协议</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/01/03/2023.1.4%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%B1%9E%E6%80%A7%E5%9F%BA%E5%8A%A0%E5%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"><span class="level-item">从零开始的属性基加密（一）</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.png" alt="MEGUMI"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">MEGUMI</p><p class="is-size-6 is-block">事学生</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>UESTC</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">9</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/M3GUMI" target="_blank" rel="noopener">Follow</a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-03T07:25:29.881Z">2023-03-03</time></p><p class="title"><a href="/2023/03/03/2023.3.3Gensyn/">Gensyn-超大规模分布式深度学习的高效计算协议</a></p><p class="categories"><a href="/categories/%E7%A7%91%E7%A0%94/">科研</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-02-09T12:33:17.018Z">2023-02-09</time></p><p class="title"><a href="/2023/02/09/2023.2.9How%20to%20wirte%20a%20paper/">How to write a paper（MEGUMI版）</a></p><p class="categories"><a href="/categories/%E7%A7%91%E7%A0%94/">科研</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-01-03T15:47:05.049Z">2023-01-03</time></p><p class="title"><a href="/2023/01/03/2023.1.4%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%B1%9E%E6%80%A7%E5%9F%BA%E5%8A%A0%E5%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/">从零开始的属性基加密（一）</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-01-02T16:59:00.172Z">2023-01-03</time></p><p class="title"><a href="/2023/01/03/2023.1.3%E5%85%B3%E4%BA%8E%E5%88%A9%E7%94%A8AI%E6%A8%A1%E5%9E%8B%E4%BC%A0%E9%80%92%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%AC%E9%92%A5%E7%AD%89%E5%85%AC%E5%85%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8A%9E%E6%B3%95/">关于利用AI模型传递密码学公钥等公共参数的方法</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-28T13:13:15.763Z">2022-12-28</time></p><p class="title"><a href="/2022/12/28/2022.12.30Web3%20DID/">去中心化身份和Web3</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/03/"><span class="level-start"><span class="level-item">March 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/02/"><span class="level-start"><span class="level-item">February 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/01/"><span class="level-start"><span class="level-item">January 2023</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/12/"><span class="level-start"><span class="level-item">December 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%94%9F%E6%B4%BB/"><span class="level-start"><span class="level-item">生活</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%A7%91%E7%A0%94/"><span class="level-start"><span class="level-item">科研</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/AI/"><span class="tag">AI</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AI%E5%AE%89%E5%85%A8/"><span class="tag">AI安全</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WEB3/"><span class="tag">WEB3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"><span class="tag">区块链</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"><span class="tag">密码学</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B1%9E%E6%80%A7%E5%9F%BA%E5%8A%A0%E5%AF%86/"><span class="tag">属性基加密</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%A1%A8%E8%BE%BE%E8%83%BD%E5%8A%9B/"><span class="tag">表达能力</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%BA%E6%96%87/"><span class="tag">论文</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%97%B2%E8%B0%88/"><span class="tag">闲谈</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">MEGUMI</a><p class="is-size-7"><span>&copy; 2023 MEGUMI</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'folded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
